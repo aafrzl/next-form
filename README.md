@@ -42,6 +42,16 @@ This project is a simple and powerful form builder with drag & drop features. Yo
 
 First, run the development server:
 
+```bash
+npm i # install dependencies
+
+npm run dev # run development server
+
+npm run build # build production
+
+npm run start # run production server
+```
+
 setup .env file and add your own credentials example:
 
 ```bash
@@ -61,14 +71,4 @@ NEXT_PUBLIC_CLERK_SIGN_IN_URL="/sign-in"
 NEXT_PUBLIC_CLERK_SIGN_UP_URL="/sign-up"
 NEXT_PUBLIC_CLERK_AFTER_SIGN_IN_URL="/dashboard"
 NEXT_PUBLIC_CLERK_AFTER_SIGN_UP_URL="/dashboard"
-```
-
-```bash
-npm i # install dependencies
-
-npm run dev # run development server
-
-npm run build # build production
-
-npm run start # run production server
 ```
