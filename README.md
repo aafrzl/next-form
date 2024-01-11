@@ -1,36 +1,74 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# NextForm - A Simple And Powerful Form Builder With Drag & Drop Features 
+
+This project is a simple and powerful form builder with drag & drop features. You can create your own form and share to your friends or clients. It's a open source project and you can contribute to this project. Build with Next.js, TailwindCSS, Shadcn/ui and Beautiful DnD.
+
+## Features
+
+- Drag & Drop Form Builder
+- Share Form With Your Friends Or Clients
+- Beautiful Landing Page With TailwindCSS
+- Dashboard to manage your forms
+- Form Submission
+- Collect Form Data
+- Authentication with Google and Github
+
+## Screenshots
+
+| Screenshot | Description |
+| --- | --- |
+| ![Landing Page](https://i.ibb.co/QNZGX9L/next-form-landingpage.png) | Landing Page |
+| ![Dashboard](https://i.ibb.co/SsTNxyH/next-form-dashboard.png) | Dashboard |
+| ![DetailsForms](https://i.ibb.co/Hn0Lcbf/next-form-detail-form.png) | Details Forms |
+| ![Form Submission](https://i.ibb.co/h2JgdvJ/next-form-form-submission.png) | Form Submission |
+| ![Form Builder](https://i.ibb.co/mq06Npn/next-form-builder.png) | Form Builder |
+
+## Demo Link
+
+[https://next-form-kappa.vercel.app/](https://next-form-kappa.vercel.app/)
+
+## Tech Stack
+
+- Next.js - React Framework
+- TypeScript - Programming Language
+- TailwindCSS - CSS Framework
+- Shadcn/ui - UI Components
+- Beautiful DnD - Drag & Drop Library
+- Prisma - ORM
+- PostgreSQL - Database from Vercel
+- Zustand - State Management
+- Clerk - Authentication Service
 
 ## Getting Started
 
 First, run the development server:
 
+setup .env file and add your own credentials example:
+
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+DATABASE_URL=""
+POSTGRES_URL=""
+POSTGRES_PRISMA_URL=""
+POSTGRES_URL_NON_POOLING=""
+POSTGRES_USER=""
+POSTGRES_HOST=""
+POSTGRES_PASSWORD=""
+POSTGRES_DATABASE=""
+
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=""
+CLERK_SECRET_KEY=""
+
+NEXT_PUBLIC_CLERK_SIGN_IN_URL="/sign-in"
+NEXT_PUBLIC_CLERK_SIGN_UP_URL="/sign-up"
+NEXT_PUBLIC_CLERK_AFTER_SIGN_IN_URL="/dashboard"
+NEXT_PUBLIC_CLERK_AFTER_SIGN_UP_URL="/dashboard"
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+```bash
+npm i # install dependencies
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+npm run dev # run development server
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+npm run build # build production
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+npm run start # run production server
+```
