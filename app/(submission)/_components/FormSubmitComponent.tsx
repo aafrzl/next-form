@@ -7,8 +7,12 @@ import {
 import { SubmitForm } from '@/app/actions/form';
 import { Button } from '@/components/ui/button';
 import { toast } from '@/components/ui/use-toast';
+import { soria } from '@/lib/fonts';
+import { cn } from '@/lib/utils';
 import { Loader } from 'lucide-react';
 import { useRef, useState, useTransition } from 'react';
+import reactStringReplace from 'react-string-replace';
+
 
 interface Props {
   formUrl: string;
@@ -80,10 +84,25 @@ export default function FormSubmitComponent({ formUrl, content }: Props) {
           key={renderKey}
           className='flex w-full max-w-[620px] grow flex-col gap-4 overflow-y-auto rounded-xl border bg-accent/50 p-8 text-center shadow-md'>
           <div className='flex flex-col gap-4'>
-            <h1 className='text-3xl font-bold text-zinc-50'>
-              Form submitted
+            <h1 className={cn(soria.className, 'text-5xl font-extrabold')}>
+              {
+                reactStringReplace(
+                  '**Thank you** for submitting your form',
+                  /\*\*(.*)\*\*/g,
+                  (match, i) => (
+                    <span key={i} className='word-animation'>
+                      {match.split('/n').map((line, index) => (
+                        <span key={index}>
+                          {line}
+                          <br />
+                        </span>
+                      ))}
+                    </span>
+                  )
+                )
+              }
             </h1>
-            <p className='text-lg text-zinc-50'>
+            <p className='text-sm'>
               Your form has been submitted successfully.
               <br />
               You can close this page now.
