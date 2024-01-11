@@ -13,10 +13,9 @@ export default function DashboardPage() {
       <Suspense fallback={<StatsCard loading={true} />}>
         <CardStatsWrapper />
       </Suspense>
+      <h2 className="mt-10 text-4xl font-bold">All Your Forms</h2>
       <Separator className="my-6" />
-      <h2 className="text-4xl font-bold">All Your Forms</h2>
-      <Separator className="my-6" />
-      <div className="grid-cols-1 items-center gap-6 md:grid md:grid-cols-2 lg:grid-cols-3 ">
+      <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
         <CreateFormBtn />
         <Suspense
           fallback={[...Array(5)].map((_, i) => (

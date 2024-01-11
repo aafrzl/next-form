@@ -66,7 +66,7 @@ export default function CreateFormBtn() {
       <DialogTrigger asChild>
         <Button
           variant={'outline'}
-          className="group flex h-[248px] flex-col items-center justify-center gap-4 border border-dashed border-primary/20 hover:cursor-pointer hover:border-primary">
+          className="group flex h-[300px] w-full flex-col items-center justify-center gap-4 border border-dashed border-primary/20 hover:cursor-pointer hover:border-primary">
           <Plus className="h-8 w-8 text-muted-foreground group-hover:text-primary" />
           <p className="text-base font-bold text-muted-foreground group-hover:text-primary">
             Create New Form
