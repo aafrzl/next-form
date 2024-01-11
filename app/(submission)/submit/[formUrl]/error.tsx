@@ -5,8 +5,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 export default function error({ error }: { error: Error }) {
-  console.log(error);
-
   return (
     <div className="flex h-full w-full flex-col items-center justify-center">
       <Image

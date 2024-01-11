@@ -6,7 +6,7 @@ import { Trash } from 'lucide-react';
 import { useState } from 'react';
 import { FormElementInstance, FormElements } from './FormElements';
 import { toast } from '@/components/ui/use-toast';
-import { deteleElementInstance } from '@/app/actions/form';
+import { deleteElementInstance } from '@/app/actions/form';
 import { useRouter } from 'next/navigation';
 
 export default
@@ -52,7 +52,7 @@ export default
 
   async function removeElementFromDatabase() {
     try {
-      await deteleElementInstance(formId, element.id)
+      await deleteElementInstance(formId, element.id)
 
       toast({
         title: "Success",

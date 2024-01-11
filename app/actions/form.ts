@@ -212,7 +212,7 @@ export async function DeleteForm(id: number) {
   });
 }
 
-export async function deteleElementInstance(id: number, elementId: string) {
+export async function deleteElementInstance(id: number, elementId: string) {
   const user = await currentUser();
 
   if (!user) {

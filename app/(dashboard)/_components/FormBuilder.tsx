@@ -4,7 +4,7 @@ import PreviewDialogBtn from '@/app/(dashboard)/_components/PreviewDialogBtn';
 import SaveFormBtn from '@/app/(dashboard)/_components/SaveFormBtn';
 import { Form } from '@prisma/client';
 import React, { useEffect } from 'react';
-import PublishFormBtn from '../../(dashboard)/_components/PublishFormBtn';
+import PublishFormBtn from './PublishFormBtn';
 import Designer from '@/app/(dashboard)/_components/Designer';
 import {
   DndContext,
@@ -13,7 +13,7 @@ import {
   useSensor,
   useSensors,
 } from '@dnd-kit/core';
-import DragOverlayWrapper from '../../(dashboard)/_components/DragOverlayWrapper';
+import DragOverlayWrapper from './DragOverlayWrapper';
 import { useDesginerStore } from '@/store/store';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
@@ -53,12 +53,7 @@ export default function FormBuilder({ form }: { form: Form }) {
   if (form.published) {
     return (
       <>
-        <Confetti
-          width={innerWidth}
-          height={innerHeight}
-          recycle={false}
-          numberOfPieces={1000}
-        />
+        <Confetti width={innerWidth} height={innerHeight} recycle={false} numberOfPieces={1000} />
         <div className="flex h-full w-full flex-col items-center justify-center overflow-hidden">
           <h2 className="mb-10 border-b pb-2 text-center text-4xl font-bold uppercase">
             {form.name} is Published

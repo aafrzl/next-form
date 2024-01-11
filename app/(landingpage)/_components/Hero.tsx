@@ -3,14 +3,13 @@
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { soria } from '@/lib/fonts';
+import { hero } from '@/lib/site-config';
 import { cn } from '@/lib/utils';
 import { useUser } from '@clerk/nextjs';
 import { ChevronRight, Github } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import reactStringReplace from 'react-string-replace';
-
-const headline = "A **simple and powerful** form builder \nwith **drag and drop** feature"
 
 export default function Hero() {
   const { isSignedIn } = useUser();
@@ -23,7 +22,7 @@ export default function Hero() {
           <ChevronRight className='h-5 w-5' />
         </Badge>
         <h1 className={cn(soria.className, "lg:text-6xl xl:text-8xl mt-8 tracking-wide font-extrabold text-center text-5xl capitalize")}>
-          {headline.split("\n").map((line, index) => (
+          {hero.heading.split("\n").map((line, index) => (
             <span key={index}>
               {reactStringReplace(line, /\*\*(.*)\*\*/g, (match, i) => (
                 <span key={i} className='word-animation'>{match}</span>

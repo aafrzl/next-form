@@ -1,42 +1,20 @@
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import { soria } from '@/lib/fonts';
+import { features, featuresItem } from '@/lib/site-config';
 import { cn } from '@/lib/utils';
 import reactStringReplace from 'react-string-replace';
-
-
-const features = [
-  {
-    title: 'User-friendly Interface',
-    description:
-      'Our intuitive interface allow you to build your forms easily and quickly. You can also share your forms with your friends and manage your forms with a simple dashboard.',
-  },
-  {
-    title: 'Customizable Forms',
-    description:
-      'You can customize your forms with a simple drag and drop. You can also customize your forms with a simple dashboard.',
-  },
-  {
-    title: 'Share Your Forms',
-    description:
-      'You can share your forms with your friends and manage your forms with a simple dashboard.',
-  },
-  {
-    title: 'Manage Your Forms',
-    description: 'You can manage your forms with a simple dashboard.',
-  },
-];
 
 const heading = '**Build, Share, and Manage** your forms'
 
 export default function Features() {
   return (
     <section className="bg-primary-foreground py-12">
-      <div className="container mx-auto">
+      <div className="container mx-auto delay-300 duration-1000 animate-in fade-in slide-in-from-bottom-7">
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
           <Badge className="text-zinc-50">Key Features</Badge>
           <h2 className={cn(soria.className, "text-3xl font-extrabold tracking-wide sm:text-5xl")}>
-            {reactStringReplace(heading, /\*\*(.*)\*\*/g, (match, i) => (
+            {reactStringReplace(features.heading, /\*\*(.*)\*\*/g, (match, i) => (
               <span key={i} className='word-animation'>{match}</span>
             ))}
           </h2>
@@ -45,7 +23,7 @@ export default function Features() {
           </p>
         </div>
         <div className="mx-auto mt-10 grid items-start gap-4 sm:grid-cols-2 lg:grid-cols-2">
-          {features.map((feature, i) => (
+          {featuresItem.map((feature, i) => (
             <Card
               key={i}
               className="min-h-[180px]">

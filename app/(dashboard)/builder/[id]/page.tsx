@@ -1,4 +1,4 @@
-import FormBuilder from '@/app/(landingpage)/_components/FormBuilder';
+import FormBuilder from '@/app/(dashboard)/_components/FormBuilder';
 import { GetFormById } from '@/app/actions/form';
 import React from 'react';
 
